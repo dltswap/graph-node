@@ -19,6 +19,11 @@ services:
       ipfs: 'ipfs:5001'
       ethereum: 'oeth:no_eip1898,archive,traces:http://124.70.185.227:8545'
       GRAPH_LOG: info
+      ETHEREUM_TRACE_STREAM_STEP_SIZE: 1000
+      GRAPH_ETHEREUM_MAX_BLOCK_RANGE_SIZE: 100
+      GRAPH_ETHEREUM_MAX_EVENT_ONLY_RANGE: 100
+      ETHEREUM_REORG_THRESHOLD: 1000
+      ETHEREUM_ANCESTOR_COUNT: 1000
   ipfs:
     image: ipfs/go-ipfs:v0.4.23
     ports:
